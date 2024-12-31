@@ -1,0 +1,125 @@
+/* Общий фон страницы */
+body {
+    background-image: url('images/second.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundAnimation 25s linear infinite; /* Плавная анимация фона */
+}
+
+/* Высота страницы на 100% */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Контейнер текста */
+#container {
+    background: rgba(0, 0, 0, 0.7); /* Более насыщенная подложка для контраста */
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Заголовок */
+h2 {
+    font-size: 3.8em;
+    background: linear-gradient(to right, #66ff66, #33ccff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Более выразительная тень */
+    margin: 0 0 20px;
+    animation: glow 4s ease-in-out infinite;
+}
+
+/* Анимация свечения заголовка */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 4px #66ff66, 0 0 8px #33ccff, 0 0 12px #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #66ff66, 0 0 15px #33ccff, 0 0 20px #ffffff;
+    }
+}
+
+/* Стиль для основного сообщения */
+.messageMain {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #ffcc33;
+    text-shadow: 2px 2px 12px rgba(255, 204, 51, 0.8); /* Увеличено свечение */
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/* Стиль для стандартного сообщения */
+.message {
+    font-size: 1.8em;
+    margin: 15px 0;
+    color: #ff9933;
+    text-shadow: 1px 1px 8px rgba(255, 153, 51, 0.7); /* Более выразительное свечение */
+    animation: fadeIn 6s ease-in-out infinite alternate;
+}
+
+/* Финальное сообщение */
+.final-message {
+    font-size: 2em; /* Увеличен размер */
+    margin-top: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.6); /* Мягкое свечение */
+    animation: pulse 3s infinite alternate;
+}
+
+/* Стиль для выделенного сообщения */
+.messageSwitch {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #f5f3e7;
+    text-shadow: 1px 1px 5px rgba(245, 243, 231, 0.7);
+}
+
+/* Анимация плавного появления текста */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимация общего свечения фона */
+@keyframes backgroundAnimation {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Анимация пульсации текста */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}

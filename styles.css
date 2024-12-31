@@ -1,0 +1,115 @@
+/* Общий фон страницы */
+body {
+    background-image: url('images/christmas.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: sparkle 25s linear infinite; /* Ускорение анимации */
+}
+
+/* Высота страницы на 100% */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Контейнер текста */
+#container {
+    background: rgba(0, 0, 0, 0.8); /* Увеличена насыщенность фона для контраста */
+    padding: 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Заголовок */
+h2 {
+    font-size: 3.5em;
+    background: linear-gradient(to right, #ffcc33, #ff66cc, #66ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Более выразительная тень */
+    margin: 0 0 20px;
+    animation: glow 4s ease-in-out infinite;
+}
+
+/* Стиль для основного сообщения */
+.messageMain {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #ffd700;
+    text-shadow: 1px 1px 10px rgba(255, 215, 0, 0.8); /* Чёткое свечение */
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+/* Стиль для выделенного сообщения */
+.messageSwitch {
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #f5f3e7;
+    text-shadow: 1px 1px 5px rgba(245, 243, 231, 0.7);
+}
+
+/* Стиль для стандартного сообщения */
+.message {
+    font-size: 1.8em; /* Увеличен размер */
+    margin: 15px 0;
+    color: #ffd700;
+    text-shadow: 1px 1px 6px rgba(255, 215, 0, 0.7); /* Лёгкое свечение */
+    animation: fadeIn 6s ease-in-out infinite alternate;
+}
+
+/* Финальное сообщение */
+.final-message {
+    font-size: 2em; /* Увеличен размер */
+    margin-top: 25px;
+    color: #66ccff;
+    text-shadow: 2px 2px 15px rgba(102, 204, 255, 0.6); /* Мягкое свечение */
+    animation: pulse 3s infinite alternate;
+}
+
+/* Анимация плавного появления текста */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Анимация общего свечения фона */
+@keyframes sparkle {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Анимация пульсации текста */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
