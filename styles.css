@@ -1,6 +1,6 @@
 /* Общий фон страницы */
 body {
-    background-image: url('images/christmas.jpg');
+    background-image: url('images/second.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    animation: sparkle 25s linear infinite; /* Ускорение анимации */
+    animation: backgroundAnimation 25s linear infinite;
 }
 
 /* Высота страницы на 100% */
@@ -23,62 +23,56 @@ html, body {
 
 /* Контейнер текста */
 #container {
-    background: rgba(0, 0, 0, 0.8); /* Увеличена насыщенность фона для контраста */
-    padding: 40px 60px;
-    border-radius: 25px;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     text-align: center;
-    max-width: 80%;
+    max-width: 90%;
     margin: auto;
 }
 
 /* Заголовок */
 h2 {
-    font-size: 3.5em;
-    background: linear-gradient(to right, #ffcc33, #ff66cc, #66ccff);
+    font-size: 3em;
+    background: linear-gradient(to right, #66ff66, #33ccff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Более выразительная тень */
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     margin: 0 0 20px;
     animation: glow 4s ease-in-out infinite;
 }
 
-/* Стиль для основного сообщения */
+/* Основное сообщение */
 .messageMain {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 20px 0;
-    color: #ffd700;
-    text-shadow: 1px 1px 10px rgba(255, 215, 0, 0.8); /* Чёткое свечение */
+    color: #ffcc33;
+    text-shadow: 2px 2px 12px rgba(255, 204, 51, 0.8);
     animation: fadeIn 3s ease-in-out infinite alternate;
 }
 
-/* Стиль для выделенного сообщения */
-.messageSwitch {
-    font-size: 2.5em;
-    margin: 20px 0;
-    color: #f5f3e7;
-    text-shadow: 1px 1px 5px rgba(245, 243, 231, 0.7);
-}
-
-/* Стиль для стандартного сообщения */
+/* Обычные сообщения */
 .message {
-    font-size: 1.8em; /* Увеличен размер */
+    font-size: 1.5em;
     margin: 15px 0;
-    color: #ffd700;
-    text-shadow: 1px 1px 6px rgba(255, 215, 0, 0.7); /* Лёгкое свечение */
+    color: #ff9933;
+    text-shadow: 1px 1px 8px rgba(255, 153, 51, 0.7);
     animation: fadeIn 6s ease-in-out infinite alternate;
 }
 
 /* Финальное сообщение */
 .final-message {
-    font-size: 2em; /* Увеличен размер */
+    font-size: 1.8em;
     margin-top: 25px;
-    color: #66ccff;
-    text-shadow: 2px 2px 15px rgba(102, 204, 255, 0.6); /* Мягкое свечение */
+    color: #ffffff;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.6);
     animation: pulse 3s infinite alternate;
 }
 
-/* Анимация плавного появления текста */
+/* Анимации */
 @keyframes fadeIn {
     from {
         opacity: 0.5;
@@ -88,8 +82,7 @@ h2 {
     }
 }
 
-/* Анимация общего свечения фона */
-@keyframes sparkle {
+@keyframes backgroundAnimation {
     0%, 100% {
         background-position: 0 0;
     }
@@ -98,7 +91,6 @@ h2 {
     }
 }
 
-/* Анимация пульсации текста */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -111,5 +103,51 @@ h2 {
     100% {
         transform: scale(1);
         opacity: 0.8;
+    }
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .messageMain {
+        font-size: 1.8em;
+    }
+
+    .message {
+        font-size: 1.3em;
+    }
+
+    .final-message {
+        font-size: 1.6em;
+    }
+
+    #container {
+        padding: 15px 25px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    .messageMain {
+        font-size: 1.5em;
+    }
+
+    .message {
+        font-size: 1.2em;
+    }
+
+    .final-message {
+        font-size: 1.4em;
+    }
+
+    #container {
+        padding: 10px 15px;
     }
 }
