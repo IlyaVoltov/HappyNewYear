@@ -72,6 +72,12 @@ h2 {
     animation: pulse 3s infinite alternate;
 }
 
+.final-message2 {
+    font-size: 1.8em;
+    margin-top: 25px;
+    color: #ffffff;
+}
+
 /* Анимации */
 @keyframes fadeIn {
     from {
